@@ -1,0 +1,26 @@
+GET http://localhost:3030/authors
+####
+POST http://localhost:3030/authors
+Content-Type: application/json
+
+{
+    "firstName": "Giorgio",
+    "lastName": "Cavalli",
+    "email": "giocava@bellamail.com",
+    "birthday": "21/11/1998",
+    "avatar": "the last airbender"
+}
+
+####
+GET http://localhost:3030/authors/65f04634b4e7831bd5f05df2
+
+####
+PATCH http://localhost:3030/authors/65f04634b4e7831bd5f05df2
+Content-Type: application/json
+
+{
+    "lastName": "Trevisan"
+}
+
+####
+DELETE http://localhost:3030/authors/65f04634b4e7831bd5f05df2
