@@ -4,10 +4,10 @@ POST http://localhost:3030/authors
 Content-Type: application/json
 
 {
-    "firstName": "Giorgio",
-    "lastName": "Cavalli",
-    "email": "giocava@bellamail.com",
-    "birthday": "21/11/1998",
+    "firstName": "Carlo",
+    "lastName": "Ramello",
+    "email": "armani@gmail.com",
+    "birthday": "1970-12-20",
     "avatar": "the last airbender"
 }
 

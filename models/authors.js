@@ -14,7 +14,7 @@ const AuthorSchema = new mongoose.Schema({
         required: true,
     },
     birthday: {
-        type: "string",
+        type: Date,
         required: true,
     },
     avatar: {
