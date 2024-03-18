@@ -8,10 +8,12 @@ const PORT = 3030;
 const app = express();
 
 const authorsRoute = require("./routes/authors/authors");
+const blogRoute = require("./routes/blog/blog");
 
 app.use(cors());
 app.use(express.json());
 app.use("/", authorsRoute);
+app.use("/", blogRoute);
 
 mongoose.connect(process.env.MONGODB_URL);
 

@@ -24,3 +24,33 @@ Content-Type: application/json
 
 ####
 DELETE http://localhost:3030/authors/65f04634b4e7831bd5f05df2
+
+####
+GET http://localhost:3030/blogPosts
+
+####
+POST http://localhost:3030/blogPosts
+Content-Type: application/json
+
+{
+    "category": "hehehe",
+    "title": "ffxiv",
+    "readTime": {"value": 10},
+    "author": {"name": "mario"},
+    "content": "<h1>topo gigio</h1>"
+}
+
+####
+GET http://localhost:3030/blogPosts/65f427cceb143671af2b4532
+
+####
+PATCH http://localhost:3030/blogPosts/65f427cceb143671af2b4532
+Content-Type: application/json
+
+{
+    "category": "updated category",
+    "title": "updated title"
+}
+
+####
+DELETE http://localhost:3030/blogPosts/65f427cceb143671af2b4532
