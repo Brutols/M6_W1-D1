@@ -9,11 +9,13 @@ const app = express();
 
 const authorsRoute = require("./routes/authors/authors");
 const blogRoute = require("./routes/blog/blog");
+const excerciseRoute = require("./routes/excercise/excercise")
 
 app.use(cors());
 app.use(express.json());
 app.use("/", authorsRoute);
 app.use("/", blogRoute);
+app.use("/", excerciseRoute);
 
 mongoose.connect(process.env.MONGODB_URL);
 

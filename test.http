@@ -54,3 +54,12 @@ Content-Type: application/json
 
 ####
 DELETE http://localhost:3030/blogPosts/65f427cceb143671af2b4532
+
+####
+POST http://localhost:3030/exercise
+Content-Type: application/json
+
+{
+    "isActive": true,
+    "age": 30
+}
