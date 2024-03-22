@@ -60,7 +60,7 @@ router.post("/authors", async (req, res) => {
   }
 });
 
-router.post('/authors/uploadAvatar', cloudUpload.single('uploadImg'), async (req, res) => {
+router.post('/authors/uploadAvatar', cloudUpload.single('avatar'), async (req, res) => {
   try {
       res.status(200).json({ source: req.file.path })
   } catch (e) {
