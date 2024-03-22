@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const AuthorsModel = require("../../models/authors");
+const { cloudUpload } = require("../../cloudinary/cloudinaryConfig")
 
 router.get("/authors", async (req, res) => {
   try {
@@ -58,6 +59,19 @@ router.post("/authors", async (req, res) => {
     });
   }
 });
+
+router.post('/authors/uploadAvatar', cloudUpload.single('uploadImg'), async (req, res) => {
+  try {
+      res.status(200).json({ source: req.file.path })
+  } catch (e) {
+      console.log(e)
+      res.status(500)
+          .send({
+              statusCode: 500,
+              message: 'File Upload Error'
+          })
+  }
+})
 
 router.patch("/authors/:id", async (req, res) => {
     const { id } = req.params;
